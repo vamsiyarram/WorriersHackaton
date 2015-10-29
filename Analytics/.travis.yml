@@ -1,0 +1,8 @@
+language: csharp
+solution: Analytics.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Analytics.sln
+after_script:
+  - nunit-console Tests/bin/Release/Analytics.Tests
